@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'scss/index.scss';
 import 'babel-polyfill';
 import Kawax from 'kawax-js';
