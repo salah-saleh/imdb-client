@@ -3,17 +3,19 @@ import { Reducer } from 'kawax-js';
 class User extends Reducer {
 
   static initialState = {
+    id: String(),
     email: String(),
-    success: false,
+    movies: Array(),
   };
 
   setUser = (state, { payload }) => ({
-    email: payload.email,
+    ...payload,
     success: true,
   });
 
   state = this.matchSuccess({
-    LOGIN: this.setUser,
+    LOGIN: this.assign,
+    MOVIES: this.assign,
   });
 
 }

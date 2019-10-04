@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'kawax-js';
 import PropTypes from 'prop-types';
 import { Button, Form, FormGroup, Label, Input, Row, Col, Badge } from 'reactstrap';
-import Login from 'actions/header/Login';
+import Login from 'actions/user/Login';
 
 class Header extends React.Component {
 

@@ -5,7 +5,7 @@ class BaseUser extends Resource {
   static baseUrl = `${process.env.API_HOST}/api/v1/users`;
 
   static headers = () => ({
-    'access-token': global.sessionStorage.getItem('accessToken'),
+    'accessToken': global.sessionStorage.getItem('access-token'),
     'token-type': 'Bearer',
   });
 

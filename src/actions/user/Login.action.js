@@ -1,5 +1,5 @@
 import { Action } from 'kawax-js';
-import LoginResource from 'resources/user/Login';
+import User from 'resources/user/User';
 
 class Login extends Action {
 
@@ -8,7 +8,7 @@ class Login extends Action {
   errorNotice = true;
 
   call = async (payload = { email, password }) => {
-    return LoginResource.authenticate({ payload });
+    return User.authenticate({ payload });
   };
 
 }

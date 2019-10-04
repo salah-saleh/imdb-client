@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'kawax-js';
 import Header from 'components/header/Header';
+import Body from 'components/body/Body';
 
 class Root extends React.Component {
 
@@ -8,7 +9,7 @@ class Root extends React.Component {
     return (
       <div>
         <Header />
-        <div>Hello World!</div>
+        <Body />
       </div>
     );
   }

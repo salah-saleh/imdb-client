@@ -1,9 +1,9 @@
 import BaseUser from 'resources/user/BaseUser';
 
-class Login extends BaseUser {
+class User extends BaseUser {
 
   static responseParser = (response, body) => ({
-    authorization: response.headers.get('auth-token'),
+    accessToken: response.headers.get('access-token'),
     ...body,
   });
 
@@ -16,6 +16,11 @@ class Login extends BaseUser {
     path: '/authenticate',
   });
 
+  movies = this.define({
+    method: 'GET',
+    path: ({ userId }) => `/${userId}/movies`,
+  });
+
 }
 
-export default Login.export();
+export default User.export();
