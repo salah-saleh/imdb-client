@@ -1,3 +1,4 @@
+require('file-loader?name=[name].[ext]!../public/index.html');
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'scss/index.scss';
 import 'babel-polyfill';

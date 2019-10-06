@@ -35,7 +35,7 @@ const __webpack_mode = __PRODUCTION__ ? 'production' : 'development';
 ## ############################################################################################## */
 
 const __webpack_output = {
-  publicPath: '/assets/',
+  publicPath: '/public/',
   filename: 'index.js',
   path: path.resolve(__dirname, 'dist/js'),
   globalObject: 'this',
@@ -168,7 +168,7 @@ const __webpack_module = {
       test: /\.worker\.js$/,
       exclude: /(node_modules)/,
       options: {
-        publicPath: '/assets/',
+        publicPath: '/public/',
         name: '[name].js',
       },
     },
@@ -212,7 +212,7 @@ const __webpack_module = {
 
 const __webpack_dev_server = {
   host: __HOST_SERVER__,
-  publicPath: '/assets',
+  publicPath: '/public',
   contentBase: path.join(__dirname, 'public'),
   watchContentBase: true,
   historyApiFallback: true,

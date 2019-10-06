@@ -26,7 +26,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack && npm run sass:build",
-    "build:production": "webpack --mode production && npm run sass:build",
+    "build:production": "webpack --mode production",
     "dev": "npm run dev:server & npm run lint:watch",
     "dev:server": "webpack-dev-server --mode development --hot",
     "dev:watchOnly": "webpack --progress --watch -d",
@@ -35,11 +35,13 @@
     "lint": "eslint src/**",
     "lint:changed": "git status | grep .js\\$ | awk '{print $NF}' | xargs eslint ",
     "lint:watch": "nodemon -e js -x 'npm run lint -- --fix'",
-    "sass:build": "node-sass --source-map true --include-path scss scss/app.scss dist/css/app.css",
+    "sass:build": "node-sass --source-map true --include-path src/scss/app.scss dist/css/app.css",
     "test": "jest --verbose",
     "test:watch": "jest --verbose --debug --watchAll",
     "deploy:staging": "./scripts/deploy.staging.sh",
-    "deploy:production": "./scripts/deploy.production.sh"
+    "deploy:production": "./scripts/deploy.production.sh",
+    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
+    "start": "node server.js",
   },
   "devDependencies": {
     "acorn": "^6.2.0",
