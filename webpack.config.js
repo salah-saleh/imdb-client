@@ -103,9 +103,9 @@ let __webpack_plugins = [
     systemvars: true, // allow overriding env files with system env variables
   }),
 
-  // new HtmlWebpackPlugin({
-  //   template: 'public/index.html'
-  // })
+  new HtmlWebpackPlugin({
+    template: 'public/index.html'
+  })
 ];
 
 /* ------------------------ ##
