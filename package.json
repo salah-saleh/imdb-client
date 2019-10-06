@@ -40,7 +40,7 @@
     "test:watch": "jest --verbose --debug --watchAll",
     "deploy:staging": "./scripts/deploy.staging.sh",
     "deploy:production": "./scripts/deploy.production.sh",
-    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
+    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build:production ; fi ",
     "start": "node server.js"
   },
   "devDependencies": {
