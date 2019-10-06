@@ -41,7 +41,7 @@
     "deploy:staging": "./scripts/deploy.staging.sh",
     "deploy:production": "./scripts/deploy.production.sh",
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "devDependencies": {
     "acorn": "^6.2.0",
