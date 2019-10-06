@@ -60,7 +60,7 @@ class Body extends React.Component {
         </div>
         <div>
           Categories:
-          {_.map(movie.categories, category => this.renderCategory(category))}
+          {_.map(movie.categories, (category) => this.renderCategory(category))}
         </div>
         <div> ------------------ </div>
       </div>
@@ -75,19 +75,19 @@ class Body extends React.Component {
 
   render() {
     const { movies, userMovies } = this.props;
-    const error= this.getError();
+    const error = this.getError();
 
     return (
       <div>
         ALL Movies:
         <div>
-          {_.map(movies, movie => this.renderMovies(movie))}
+          {_.map(movies, (movie) => this.renderMovies(movie))}
         </div>
         <div>
         User Movies:
           <Button onClick={this.loadUserMovies}> load user movies </Button>
           <Badge color="danger">{error.message}</Badge>
-          {_.map(userMovies, movie => this.renderMovies(movie))}
+          {_.map(userMovies, (movie) => this.renderMovies(movie))}
         </div>
       </div>
     );

@@ -7,9 +7,7 @@ class Login extends Action {
 
   errorNotice = true;
 
-  call = async (payload = { email, password }) => {
-    return User.authenticate({ payload });
-  };
+  call = async (payload = { email, password }) => User.authenticate({ payload });
 
 }
 

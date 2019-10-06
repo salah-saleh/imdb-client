@@ -7,9 +7,7 @@ class LoadMovies extends Action {
 
   errorNotice = true;
 
-  call = async () => {
-    return Movie.index();
-  };
+  call = async () => Movie.index();
 
 }
 

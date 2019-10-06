@@ -42,7 +42,7 @@ class Header extends React.Component {
   };
 
   renderLoginForm() {
-    const error= this.getError();
+    const error = this.getError();
 
     return (
       <Form onSubmit={this.onSubmit}>
@@ -52,15 +52,25 @@ class Header extends React.Component {
               <Label for="email">Email</Label>
             </Col>
             <Col xs="auto">
-              <Input type="email" name="email" id="email"
-                onChange={e => this.setState({ email: e.target.value })} required />
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                onChange={(e) => this.setState({ email: e.target.value })}
+                required
+              />
             </Col>
             <Col xs="auto">
               <Label for="password">Password</Label>
             </Col>
             <Col xs="auto">
-              <Input type="password" name="password" id="password"
-                onChange={e => this.setState({ password: e.target.value })} required />
+              <Input
+                type="password"
+                name="password"
+                id="password"
+                onChange={(e) => this.setState({ password: e.target.value })}
+                required
+              />
             </Col>
             <Col xs="auto">
               <Button type="submit">Submit</Button>

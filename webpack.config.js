@@ -35,7 +35,7 @@ const __webpack_mode = __PRODUCTION__ ? 'production' : 'development';
 ## ############################################################################################## */
 
 const __webpack_output = {
-  publicPath: '/public/',
+  publicPath: __DEV__ ? '/public/' : '/',
   filename: 'index.js',
   path: path.resolve(__dirname, 'dist/js'),
   globalObject: 'this',
@@ -102,6 +102,10 @@ let __webpack_plugins = [
     path: getDotEnvConf(),
     systemvars: true, // allow overriding env files with system env variables
   }),
+
+  // new HtmlWebpackPlugin({
+  //   template: 'public/index.html'
+  // })
 ];
 
 /* ------------------------ ##
@@ -126,7 +130,7 @@ if (__DEV__ && ___WEBPACK_ANALYZE__) {
 
 const __webpack_aliases = {
   alias: {
-    'scss': path.join(__dirname, 'scss'),
+    'scss': path.join(__dirname, 'src/scss'),
   }
 };
 
@@ -212,7 +216,7 @@ const __webpack_module = {
 
 const __webpack_dev_server = {
   host: __HOST_SERVER__,
-  publicPath: '/public',
+  publicPath: '/src',
   contentBase: path.join(__dirname, 'public'),
   watchContentBase: true,
   historyApiFallback: true,

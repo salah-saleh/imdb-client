@@ -7,9 +7,7 @@ class LoadMovies extends Action {
 
   errorNotice = true;
 
-  call = async () => {
-    return User.movies({ userId: this.getState('user.id') });
-  };
+  call = async () => User.movies({ userId: this.getState('user.id') });
 
 }
 

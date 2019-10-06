@@ -17,6 +17,7 @@ class Root extends Reducer {
       movies: Movies.delegate(),
     },
   });
+
 }
 
 export default Root;
